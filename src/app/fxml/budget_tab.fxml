@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="500.0" prefWidth="575.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controllers.BudgetController">
+    <children>
+        <Button fx:id="addBudgetButton" layoutX="143.0" layoutY="150.0" mnemonicParsing="false" onAction="#addBudgetButton" text="Add Budget" />
+        <Label layoutX="30.0" layoutY="28.0" text="Avoid Overspending! Use Our Budget Tracker">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="categoryComboBox" layoutX="143.0" layoutY="80.0" prefWidth="150.0" promptText="Select Category" />
+        <TextField fx:id="budgetTextField" layoutX="318.0" layoutY="80.0" promptText="Enter Budget" />
+        <Button fx:id="deleteBudget" layoutX="288.0" layoutY="150.0" mnemonicParsing="false" onAction="#deleteBudgetButton" prefHeight="25.0" prefWidth="80.0" text="Delete " />
+        <TableView fx:id="budgetTable" layoutX="25.0" layoutY="188.0" prefHeight="297.0" prefWidth="509.0">
+            <columns>
+                <TableColumn fx:id="budgetCategoryColumn" prefWidth="263.0" text="Category" />
+                <TableColumn fx:id="budgetAmountColumn" minWidth="0.0" prefWidth="245.0" text="Budget" />
+            </columns>
+        </TableView>
+<!--        <DatePicker fx:id="startDatePicker" layoutX="106.0" layoutY="113.0" onAction="#getStartDate" promptText="start date" />-->
+<!--        <DatePicker fx:id="endDatePicker" layoutX="300.0" layoutY="113.0" onAction="#getEndDate" promptText="end date " />-->
+    </children>
+</AnchorPane>
